@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:mohally/Arabic/Arabic_controllers/arabic_edit_address_controller.dart';
 import 'package:mohally/Arabic/Arabic_controllers/user_Address_view_Controller.dart';
 import 'package:mohally/Arabic/Screens/Address/arabic_add_new_address.dart';
-import 'package:mohally/Arabic/Screens/Address/arabic_default_user_address_details.dart';
 import 'package:mohally/Arabic/Screens/Address/arabic_edit_address.dart';
 import 'package:mohally/Arabic/Screens/Arabic_HomeScreen/arabic_tabbar.dart';
 import 'package:mohally/core/app_export.dart';

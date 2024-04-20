@@ -134,22 +134,18 @@ class _SearchScreenState extends State<SearchScreen> {
         automaticallyImplyLeading: false,
         leading: Padding(
           padding: const EdgeInsets.only(left: 20),
-          child: GestureDetector(
-            onTap: () {
-              Get.back();
-            },
-            child: Container(
-                width: Get.width * .06,
-                height: Get.height * .02,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: const Color.fromARGB(90, 158, 158, 158)),
-                child: Center(
+          child: CustomIconButton(
+              onTap: () {
+                Get.back();
+              },
+              height: 40.adaptSize,
+              width: 40.adaptSize,
+              decoration: IconButtonStyleHelper.fillGrayTL20,
+              child: Center(
                   child: Icon(
-                    Icons.arrow_back,
-                  ),
-                )),
-          ),
+                Icons.arrow_back,
+                color: Colors.black,
+              ))),
         ),
       ),
       body: SafeArea(

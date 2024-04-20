@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
@@ -14,7 +13,6 @@ import 'package:mohally/presentation/category_page/category_screen.dart';
 import 'package:mohally/presentation/drawer_draweritem/drawer_draweritem.dart';
 import 'package:mohally/presentation/home_page_one_page/EnglishAllContent/EnglishHomeScreen.dart';
 import 'package:mohally/presentation/my_profile_page/my_profile_page.dart';
-import 'package:mohally/presentation/search_screen/search_screen.dart';
 import 'package:mohally/presentation/wishlist_page/wishlist_page.dart';
 import 'package:mohally/routes/app_routes.dart';
 import 'package:mohally/view_models/controller/CategoryController/EnglishCategoriesByNameController.dart';

@@ -48,7 +48,6 @@ class _CartPage_arabicState extends State<CartPage_arabic> {
       ArabicProductPriceChngeByAttribute();
   PageController _pageController = PageController();
 
-  int _currentIndex = 0;
   arabic_addtocart_controller AddToCartcontrollerin =
       arabic_addtocart_controller();
   int selectedImageIndex = 0;
@@ -2943,7 +2942,6 @@ class _CartPage_arabicState extends State<CartPage_arabic> {
                             weightid = null;
                             quantityid = null;
                             capacityid = null;
-                            _currentIndex = 0;
                           });
                         },
                         imagePath: ImageConstant.imgMaskGroup24x24,
@@ -3017,9 +3015,7 @@ class _CartPage_arabicState extends State<CartPage_arabic> {
                                                 );
                                               },
                                               onPageChanged: (index) {
-                                                setState(() {
-                                                  _currentIndex = index;
-                                                });
+                                                setState(() {});
                                               },
                                             )
                                           : PageView.builder(
@@ -3039,9 +3035,7 @@ class _CartPage_arabicState extends State<CartPage_arabic> {
                                                 );
                                               },
                                               onPageChanged: (index) {
-                                                setState(() {
-                                                  _currentIndex = index;
-                                                });
+                                                setState(() {});
                                               },
                                             )
                                     else
@@ -3070,9 +3064,7 @@ class _CartPage_arabicState extends State<CartPage_arabic> {
                                           );
                                         },
                                         onPageChanged: (index) {
-                                          setState(() {
-                                            _currentIndex = index;
-                                          });
+                                          setState(() {});
                                         },
                                       ),
                                   ],
@@ -5087,8 +5079,8 @@ class _CartPage_arabicState extends State<CartPage_arabic> {
                                 physics: NeverScrollableScrollPhysics(),
                                 itemCount: 1,
                                 itemBuilder: (BuildContext context, int index) {
-                                  bool inCart = productviewcontroller
-                                      .userlist.value.productView!.inCart;
+                                  // bool inCart = productviewcontroller
+                                  //     .userlist.value.productView!.inCart;
                                   return Obx(
                                     () => InkWell(
                                       onTap: () {

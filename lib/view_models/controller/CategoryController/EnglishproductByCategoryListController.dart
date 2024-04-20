@@ -5,6 +5,13 @@ import 'package:mohally/repository/Auth_Repository/auth_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ProductsByCatIdListControllerEnglish extends GetxController {
+  /// for filter screen
+  var expandColorAndSize = [false, false].obs;
+  var expandDetailAndCollarStyle = [false, false].obs;
+  var selectedColorAndSizeIndex = [-1, -1].obs;
+  var selectedDetailAndCollarStyleIndex = [-1, -1].obs;
+
+  ///
   final _api = AuthRepository();
   final rxRequestStatus = Status.LOADING.obs;
   RxString error = ''.obs;
@@ -17,6 +24,7 @@ class ProductsByCatIdListControllerEnglish extends GetxController {
   RxBool loading = false.obs;
 
   void ProductByCatId_apiHit(String EnglishproductbyCatId) async {
+    
     loading.value = true;
     Map data = {
       "cat_id": EnglishproductbyCatId.toString(),

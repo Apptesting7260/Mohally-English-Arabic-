@@ -15,6 +15,7 @@ import 'package:mohally/core/utils/image_constant.dart';
 import 'package:mohally/core/utils/size_utils.dart';
 import 'package:mohally/data/app_exceptions.dart';
 import 'package:mohally/data/response/status.dart';
+import 'package:mohally/presentation/FilterationScreen/FilterScreen.dart';
 import 'package:mohally/presentation/category_page/MainCategories/widgets/CategoryProducts.dart';
 import 'package:mohally/presentation/category_page/MainCategories/widgets/AllProductView.dart';
 import 'package:mohally/presentation/home_page_one_page/EnglishAllContent/EnglishHomeScreen.dart';
@@ -28,8 +29,10 @@ import 'package:mohally/view_models/controller/CategoryController/Englishproduct
 import 'package:mohally/view_models/controller/EnglishSearchController/EnglishCategorySearch.dart';
 import 'package:mohally/view_models/controller/Home_controller_English/HomeControllerEnglish.dart';
 import 'package:mohally/widgets/Internet_exception_widget/internet_exception_widget.dart';
+import 'package:mohally/widgets/app_bar/appbar_subtitle.dart';
 import 'package:mohally/widgets/app_bar/appbar_title.dart';
 import 'package:mohally/widgets/app_bar/custom_app_bar.dart';
+import 'package:mohally/widgets/custom_elevated_button.dart';
 import 'package:mohally/widgets/custom_icon_button.dart';
 import 'package:mohally/widgets/custom_image_view.dart';
 import 'package:mohally/widgets/custom_search_view.dart';
@@ -149,21 +152,36 @@ class _CategoryScreenState extends State<CategoryScreen> {
           return Scaffold(
             resizeToAvoidBottomInset: false,
             appBar: widget.showAppBar
-                ? AppBar(
-                    leading: Padding(
-                      padding: const EdgeInsets.only(top: 5, left: 10),
-                      child: CustomIconButton(
-                          onTap: () {
-                            Get.back();
-                          },
-                          height: 40.adaptSize,
-                          width: 40.adaptSize,
-                          decoration: IconButtonStyleHelper.fillGrayTL20,
-                          child: Center(
-                              child: Icon(
-                            Icons.arrow_back,
-                            color: Colors.black,
-                          ))),
+                ? CustomAppBar(
+                    leadingWidth: 40,
+                    title: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: CustomIconButton(
+                              onTap: () {
+                                Get.back();
+                              },
+                              height: 40.adaptSize,
+                              width: 40.adaptSize,
+                              decoration: IconButtonStyleHelper.fillGrayTL20,
+                              child: Center(
+                                  child: Icon(
+                                Icons.arrow_back,
+                                color: Colors.black,
+                              ))),
+                        ),
+                        SizedBox(
+                          width: Get.width * .67,
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: Image.asset(
+                              'assets/images/filter.png',
+                              height: Get.height * .09,
+                              width: Get.width * .09,
+                            )),
+                      ],
                     ),
                   )
                 : _buildAppBar(context),
@@ -171,7 +189,9 @@ class _CategoryScreenState extends State<CategoryScreen> {
               child: ListView(
                 physics: NeverScrollableScrollPhysics(),
                 children: [
-                
+                  SizedBox(
+                    height: Get.height * .03,
+                  ),
                   Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: 20.h,
@@ -260,11 +280,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
                           //         Get.to(SearchScreen(searchQuery: value));
                           //       },
                           //     )),
-                             CustomSearchView(
-                              hintText: "Search",
-                              enableTap: true,
-                              readOnly: true,
-                            ),
+                          CustomSearchView(
+                            hintText: "Search",
+                            enableTap: true,
+                            readOnly: true,
+                          ),
                           Positioned(
                               top: 20,
                               left: 240,
@@ -286,11 +306,14 @@ class _CategoryScreenState extends State<CategoryScreen> {
                       style: theme.textTheme.titleMedium,
                     ),
                   ),
-                  SizedBox(height: Get.height*.01,),
+                  SizedBox(
+                    height: Get.height * .01,
+                  ),
                   Obx(
                     () => Container(
                       width: double.infinity,
-                      height: widget.FromHomeToCat ? Get.height*.8 : height * .72,
+                      height:
+                          widget.FromHomeToCat ? Get.height * .8 : height * .72,
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Row(
@@ -302,7 +325,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
                               child: Column(
                                 children: [
                                   Container(
-
                                     height: widget.FromHomeToCat
                                         ? Get.height * .75
                                         : Get.height * .65,
@@ -505,11 +527,29 @@ class _CategoryScreenState extends State<CategoryScreen> {
 
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return CustomAppBar(
-      title: AppbarTitle(
-        text: "Categories",
-        margin: EdgeInsets.only(
-            // left: 20,
-            left: Get.width * 0.055),
+      leadingWidth: 40,
+      title: Row(
+        children: [
+          AppbarSubtitle(
+            text: "Categories",
+            margin: EdgeInsets.only(left: 16),
+          ),
+          SizedBox(
+            width: Get.width * .55,
+          ),
+          Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: GestureDetector(
+                onTap: () {
+                  Get.to(FilterScreen());
+                },
+                child: Image.asset(
+                  'assets/images/filter.png',
+                  height: Get.height * .09,
+                  width: Get.width * .09,
+                ),
+              )),
+        ],
       ),
     );
   }

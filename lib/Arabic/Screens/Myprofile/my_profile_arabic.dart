@@ -1,22 +1,15 @@
-// ignore_for_file: unused_import
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mohally/Arabic/Screens/ArabicLanguageSwitchScreen/arabic_language_switch_screen.dart';
-import 'package:mohally/Arabic/Screens/Arabic_HomeScreen/arabic_HomeTab.dart';
-import 'package:mohally/Arabic/Screens/Arabic_HomeScreen/arabic_tabbar.dart';
 import 'package:mohally/Arabic/Screens/CustomerSupport/arabic_customersupport.dart';
 import 'package:mohally/Arabic/Screens/MyAccount/arabic_myaccount.dart';
 import 'package:mohally/Arabic/Screens/Myprofile/My%20Order/arabic_my_order.dart';
 import 'package:mohally/Arabic/Screens/Myprofile/MyCoupons/arabic_coupons.dart';
 import 'package:mohally/Arabic/Screens/Myprofile/Notifications/arabic_notifications.dart';
-import 'package:mohally/Arabic/Screens/Welcome_screens/arabic_login_screen.dart';
 import 'package:mohally/Arabic/Screens/Address/arabic_address.dart';
-import 'package:mohally/Arabic/Screens/ReviewScreen/arabic_review.dart';
 import 'package:mohally/core/app_export.dart';
-import 'package:mohally/presentation/choose_language_screen/choose_language_screen.dart';
-import 'package:mohally/presentation/my_account/my_account_screen.dart';
 import 'package:mohally/presentation/splash_screen/splash_screen.dart';
 import 'package:mohally/view_models/controller/MyAccount_controller/myAccount_controller.dart';
 import 'package:mohally/widgets/app_bar/appbar_subtitle.dart';
@@ -211,17 +204,17 @@ class _MyProfilePage_arabicState extends State<MyProfilePage_arabic> {
                               userMessage: "طلباتي",
                             ),
                           ),
-                          SizedBox(height: 26.v),
-                          InkWell(
-                            onTap: () {
-                              Get.to(() => ReviewsScreen_arabic());
-                            },
-                            child: _buildMessageOne(
-                              context,
-                              userImage: ImageConstant.imgRateReview1,
-                              userMessage: "تعليقاتي",
-                            ),
-                          ),
+                          // SizedBox(height: 26.v),
+                          // InkWell(
+                          //   onTap: () {
+                          //     Get.to(() => ReviewsScreen_arabic());
+                          //   },
+                          //   child: _buildMessageOne(
+                          //     context,
+                          //     userImage: ImageConstant.imgRateReview1,
+                          //     userMessage: "تعليقاتي",
+                          //   ),
+                          // ),
                           SizedBox(height: 26.v),
                           InkWell(
                             onTap: () {

@@ -84,21 +84,21 @@ class _SingleProductViewState extends State<SingleProductView> {
     productviewcontroller.Single_ProductApiHit(context, productId, mainCatId);
     homeView_controller.homeview_apihit();
     setState(() {
- sizeid=null;
- modelid=null;
- itemid=null;
- weightid=null;
- quantityid=null;
- capacityid=null;
- colorId=null;     
-  productpricechangeDetails = {};
-  AselectedcolorIndex.value = (-1);
- AselectedSizeIndex.value =(-1);
- AselectedModelIndex.value =(-1);
- AselecteditemIndex.value =(-1);
- AselectedCapacityIndex.value =(-1);
- AselectedquantityIndex.value =(-1);
- AselectedweightIndex.value =(-1);
+      sizeid = null;
+      modelid = null;
+      itemid = null;
+      weightid = null;
+      quantityid = null;
+      capacityid = null;
+      colorId = null;
+      productpricechangeDetails = {};
+      AselectedcolorIndex.value = (-1);
+      AselectedSizeIndex.value = (-1);
+      AselectedModelIndex.value = (-1);
+      AselecteditemIndex.value = (-1);
+      AselectedCapacityIndex.value = (-1);
+      AselectedquantityIndex.value = (-1);
+      AselectedweightIndex.value = (-1);
     });
     // homeView_controller.homeview_apihit();
   }
@@ -404,53 +404,119 @@ class _SingleProductViewState extends State<SingleProductView> {
                                         children: [
                                           GestureDetector(
                                             onTap: () {
-                                              if (sizeid != null || 
-    colorId != null || 
-    itemid != null || 
-    weightid != null || 
-    quantityid != null || 
-    capacityid != null || 
-    modelid != null ||
-    (sizeid != null && colorId != null) || 
-    (sizeid != null && itemid != null) || 
-    (sizeid != null && weightid != null) || 
-    (sizeid != null && quantityid != null) || 
-    (sizeid != null && capacityid != null) || 
-    (sizeid != null && modelid != null) || 
-    (colorId != null && itemid != null) || 
-    (colorId != null && weightid != null) || 
-    (colorId != null && quantityid != null) || 
-    (colorId != null && capacityid != null) || 
-    (colorId != null && modelid != null) || 
-    (itemid != null && weightid != null) || 
-    (itemid != null && quantityid != null) || 
-    (itemid != null && capacityid != null) || 
-    (itemid != null && modelid != null) || 
-    (weightid != null && quantityid != null) || 
-    (weightid != null && capacityid != null) || 
-    (weightid != null && modelid != null) || 
-    (quantityid != null && capacityid != null) || 
-    (quantityid != null && modelid != null) || 
-    (capacityid != null && modelid != null) ||
-    (sizeid != null && colorId != null && modelid != null) || 
-    (sizeid != null && colorId != null && itemid != null) || 
-    (sizeid != null && colorId != null && weightid != null) || 
-    (sizeid != null && colorId != null && quantityid != null) || 
-    (sizeid != null && colorId != null && capacityid != null) || 
-    (sizeid != null && itemid != null && modelid != null) || 
-    (sizeid != null && weightid != null && modelid != null) || 
-    (sizeid != null && quantityid != null && modelid != null) || 
-    (sizeid != null && capacityid != null && modelid != null) || 
-    (colorId != null && itemid != null && modelid != null) || 
-    (colorId != null && weightid != null && modelid != null) || 
-    (colorId != null && quantityid != null && modelid != null) || 
-    (colorId != null && capacityid != null && modelid != null) || 
-    (itemid != null && weightid != null && modelid != null) || 
-    (itemid != null && quantityid != null && modelid != null) || 
-    (itemid != null && capacityid != null && modelid != null) || 
-    (weightid != null && quantityid != null && modelid != null) || 
-    (weightid != null && capacityid != null && modelid != null) || 
-    (quantityid != null && capacityid != null && modelid != null)) {
+                                              // if(productviewcontroller.userlist
+                                              //     .value.productView?.inCart==true){
+
+                                              //     }
+                                              // bool inCart =
+                                              //     productviewcontroller.userlist
+                                              //         .value.productView?.inCart;
+                                              if (sizeid != null ||
+                                                  colorId != null ||
+                                                  itemid != null ||
+                                                  weightid != null ||
+                                                  quantityid != null ||
+                                                  capacityid != null ||
+                                                  modelid != null ||
+                                                  (sizeid != null &&
+                                                      colorId != null) ||
+                                                  (sizeid != null &&
+                                                      itemid != null) ||
+                                                  (sizeid != null &&
+                                                      weightid != null) ||
+                                                  (sizeid != null &&
+                                                      quantityid != null) ||
+                                                  (sizeid != null &&
+                                                      capacityid != null) ||
+                                                  (sizeid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      itemid != null) ||
+                                                  (colorId != null &&
+                                                      weightid != null) ||
+                                                  (colorId != null &&
+                                                      quantityid != null) ||
+                                                  (colorId != null &&
+                                                      capacityid != null) ||
+                                                  (colorId != null &&
+                                                      modelid != null) ||
+                                                  (itemid != null &&
+                                                      weightid != null) ||
+                                                  (itemid != null &&
+                                                      quantityid != null) ||
+                                                  (itemid != null &&
+                                                      capacityid != null) ||
+                                                  (itemid != null &&
+                                                      modelid != null) ||
+                                                  (weightid != null &&
+                                                      quantityid != null) ||
+                                                  (weightid != null &&
+                                                      capacityid != null) ||
+                                                  (weightid != null &&
+                                                      modelid != null) ||
+                                                  (quantityid != null &&
+                                                      capacityid != null) ||
+                                                  (quantityid != null &&
+                                                      modelid != null) ||
+                                                  (capacityid != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      itemid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      weightid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      quantityid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      capacityid != null) ||
+                                                  (sizeid != null &&
+                                                      itemid != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      weightid != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      quantityid != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      capacityid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      itemid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      weightid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      quantityid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      capacityid != null &&
+                                                      modelid != null) ||
+                                                  (itemid != null &&
+                                                      weightid != null &&
+                                                      modelid != null) ||
+                                                  (itemid != null &&
+                                                      quantityid != null &&
+                                                      modelid != null) ||
+                                                  (itemid != null &&
+                                                      capacityid != null &&
+                                                      modelid != null) ||
+                                                  (weightid != null &&
+                                                      quantityid != null &&
+                                                      modelid != null) ||
+                                                  (weightid != null &&
+                                                      capacityid != null &&
+                                                      modelid != null) ||
+                                                  (quantityid != null &&
+                                                      capacityid != null &&
+                                                      modelid != null)) {
                                                 // int totalQuantity = int.tryParse(
                                                 //         _productpricechangebyattributecontroller
                                                 //             .totalQuantity
@@ -485,53 +551,112 @@ class _SingleProductViewState extends State<SingleProductView> {
                                           ),
                                           GestureDetector(
                                             onTap: () {
-                                             if (sizeid != null || 
-    colorId != null || 
-    itemid != null || 
-    weightid != null || 
-    quantityid != null || 
-    capacityid != null || 
-    modelid != null ||
-    (sizeid != null && colorId != null) || 
-    (sizeid != null && itemid != null) || 
-    (sizeid != null && weightid != null) || 
-    (sizeid != null && quantityid != null) || 
-    (sizeid != null && capacityid != null) || 
-    (sizeid != null && modelid != null) || 
-    (colorId != null && itemid != null) || 
-    (colorId != null && weightid != null) || 
-    (colorId != null && quantityid != null) || 
-    (colorId != null && capacityid != null) || 
-    (colorId != null && modelid != null) || 
-    (itemid != null && weightid != null) || 
-    (itemid != null && quantityid != null) || 
-    (itemid != null && capacityid != null) || 
-    (itemid != null && modelid != null) || 
-    (weightid != null && quantityid != null) || 
-    (weightid != null && capacityid != null) || 
-    (weightid != null && modelid != null) || 
-    (quantityid != null && capacityid != null) || 
-    (quantityid != null && modelid != null) || 
-    (capacityid != null && modelid != null) ||
-    (sizeid != null && colorId != null && modelid != null) || 
-    (sizeid != null && colorId != null && itemid != null) || 
-    (sizeid != null && colorId != null && weightid != null) || 
-    (sizeid != null && colorId != null && quantityid != null) || 
-    (sizeid != null && colorId != null && capacityid != null) || 
-    (sizeid != null && itemid != null && modelid != null) || 
-    (sizeid != null && weightid != null && modelid != null) || 
-    (sizeid != null && quantityid != null && modelid != null) || 
-    (sizeid != null && capacityid != null && modelid != null) || 
-    (colorId != null && itemid != null && modelid != null) || 
-    (colorId != null && weightid != null && modelid != null) || 
-    (colorId != null && quantityid != null && modelid != null) || 
-    (colorId != null && capacityid != null && modelid != null) || 
-    (itemid != null && weightid != null && modelid != null) || 
-    (itemid != null && quantityid != null && modelid != null) || 
-    (itemid != null && capacityid != null && modelid != null) || 
-    (weightid != null && quantityid != null && modelid != null) || 
-    (weightid != null && capacityid != null && modelid != null) || 
-    (quantityid != null && capacityid != null && modelid != null)) {
+                                              if (sizeid != null ||
+                                                  colorId != null ||
+                                                  itemid != null ||
+                                                  weightid != null ||
+                                                  quantityid != null ||
+                                                  capacityid != null ||
+                                                  modelid != null ||
+                                                  (sizeid != null &&
+                                                      colorId != null) ||
+                                                  (sizeid != null &&
+                                                      itemid != null) ||
+                                                  (sizeid != null &&
+                                                      weightid != null) ||
+                                                  (sizeid != null &&
+                                                      quantityid != null) ||
+                                                  (sizeid != null &&
+                                                      capacityid != null) ||
+                                                  (sizeid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      itemid != null) ||
+                                                  (colorId != null &&
+                                                      weightid != null) ||
+                                                  (colorId != null &&
+                                                      quantityid != null) ||
+                                                  (colorId != null &&
+                                                      capacityid != null) ||
+                                                  (colorId != null &&
+                                                      modelid != null) ||
+                                                  (itemid != null &&
+                                                      weightid != null) ||
+                                                  (itemid != null &&
+                                                      quantityid != null) ||
+                                                  (itemid != null &&
+                                                      capacityid != null) ||
+                                                  (itemid != null &&
+                                                      modelid != null) ||
+                                                  (weightid != null &&
+                                                      quantityid != null) ||
+                                                  (weightid != null &&
+                                                      capacityid != null) ||
+                                                  (weightid != null &&
+                                                      modelid != null) ||
+                                                  (quantityid != null &&
+                                                      capacityid != null) ||
+                                                  (quantityid != null &&
+                                                      modelid != null) ||
+                                                  (capacityid != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      itemid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      weightid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      quantityid != null) ||
+                                                  (sizeid != null &&
+                                                      colorId != null &&
+                                                      capacityid != null) ||
+                                                  (sizeid != null &&
+                                                      itemid != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      weightid != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      quantityid != null &&
+                                                      modelid != null) ||
+                                                  (sizeid != null &&
+                                                      capacityid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      itemid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      weightid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      quantityid != null &&
+                                                      modelid != null) ||
+                                                  (colorId != null &&
+                                                      capacityid != null &&
+                                                      modelid != null) ||
+                                                  (itemid != null &&
+                                                      weightid != null &&
+                                                      modelid != null) ||
+                                                  (itemid != null &&
+                                                      quantityid != null &&
+                                                      modelid != null) ||
+                                                  (itemid != null &&
+                                                      capacityid != null &&
+                                                      modelid != null) ||
+                                                  (weightid != null &&
+                                                      quantityid != null &&
+                                                      modelid != null) ||
+                                                  (weightid != null &&
+                                                      capacityid != null &&
+                                                      modelid != null) ||
+                                                  (quantityid != null &&
+                                                      capacityid != null &&
+                                                      modelid != null)) {
                                                 int totalQuantity = int.tryParse(
                                                         _productpricechangebyattributecontroller
                                                             .totalQuantity
@@ -2274,9 +2399,7 @@ class _SingleProductViewState extends State<SingleProductView> {
                                       .id
                                       .toString();
 
-
-                                       print(
-                                        "${colorId}=====COLORID");
+                                  print("${colorId}=====COLORID");
 
                                   pid = productviewcontroller
                                       .userlist.value.productView?.id
@@ -2429,8 +2552,7 @@ class _SingleProductViewState extends State<SingleProductView> {
                                   ?.size?[index]
                                   .id
                                   .toString();
- print(
-                                        "${sizeid}=====SizeID");
+                              print("${sizeid}=====SizeID");
                               pid = productviewcontroller
                                   .userlist.value.productView?.id
                                   .toString();
@@ -3203,53 +3325,63 @@ class _SingleProductViewState extends State<SingleProductView> {
           return Obx(
             () => InkWell(
               onTap: () {
-               if (sizeid != null || 
-    colorId != null || 
-    itemid != null || 
-    weightid != null || 
-    quantityid != null || 
-    capacityid != null || 
-    modelid != null ||
-    (sizeid != null && colorId != null) || 
-    (sizeid != null && itemid != null) || 
-    (sizeid != null && weightid != null) || 
-    (sizeid != null && quantityid != null) || 
-    (sizeid != null && capacityid != null) || 
-    (sizeid != null && modelid != null) || 
-    (colorId != null && itemid != null) || 
-    (colorId != null && weightid != null) || 
-    (colorId != null && quantityid != null) || 
-    (colorId != null && capacityid != null) || 
-    (colorId != null && modelid != null) || 
-    (itemid != null && weightid != null) || 
-    (itemid != null && quantityid != null) || 
-    (itemid != null && capacityid != null) || 
-    (itemid != null && modelid != null) || 
-    (weightid != null && quantityid != null) || 
-    (weightid != null && capacityid != null) || 
-    (weightid != null && modelid != null) || 
-    (quantityid != null && capacityid != null) || 
-    (quantityid != null && modelid != null) || 
-    (capacityid != null && modelid != null) ||
-    (sizeid != null && colorId != null && modelid != null) || 
-    (sizeid != null && colorId != null && itemid != null) || 
-    (sizeid != null && colorId != null && weightid != null) || 
-    (sizeid != null && colorId != null && quantityid != null) || 
-    (sizeid != null && colorId != null && capacityid != null) || 
-    (sizeid != null && itemid != null && modelid != null) || 
-    (sizeid != null && weightid != null && modelid != null) || 
-    (sizeid != null && quantityid != null && modelid != null) || 
-    (sizeid != null && capacityid != null && modelid != null) || 
-    (colorId != null && itemid != null && modelid != null) || 
-    (colorId != null && weightid != null && modelid != null) || 
-    (colorId != null && quantityid != null && modelid != null) || 
-    (colorId != null && capacityid != null && modelid != null) || 
-    (itemid != null && weightid != null && modelid != null) || 
-    (itemid != null && quantityid != null && modelid != null) || 
-    (itemid != null && capacityid != null && modelid != null) || 
-    (weightid != null && quantityid != null && modelid != null) || 
-    (weightid != null && capacityid != null && modelid != null) || 
-    (quantityid != null && capacityid != null && modelid != null)) {
+                if (sizeid != null ||
+                    colorId != null ||
+                    itemid != null ||
+                    weightid != null ||
+                    quantityid != null ||
+                    capacityid != null ||
+                    modelid != null ||
+                    (sizeid != null && colorId != null) ||
+                    (sizeid != null && itemid != null) ||
+                    (sizeid != null && weightid != null) ||
+                    (sizeid != null && quantityid != null) ||
+                    (sizeid != null && capacityid != null) ||
+                    (sizeid != null && modelid != null) ||
+                    (colorId != null && itemid != null) ||
+                    (colorId != null && weightid != null) ||
+                    (colorId != null && quantityid != null) ||
+                    (colorId != null && capacityid != null) ||
+                    (colorId != null && modelid != null) ||
+                    (itemid != null && weightid != null) ||
+                    (itemid != null && quantityid != null) ||
+                    (itemid != null && capacityid != null) ||
+                    (itemid != null && modelid != null) ||
+                    (weightid != null && quantityid != null) ||
+                    (weightid != null && capacityid != null) ||
+                    (weightid != null && modelid != null) ||
+                    (quantityid != null && capacityid != null) ||
+                    (quantityid != null && modelid != null) ||
+                    (capacityid != null && modelid != null) ||
+                    (sizeid != null && colorId != null && modelid != null) ||
+                    (sizeid != null && colorId != null && itemid != null) ||
+                    (sizeid != null && colorId != null && weightid != null) ||
+                    (sizeid != null && colorId != null && quantityid != null) ||
+                    (sizeid != null && colorId != null && capacityid != null) ||
+                    (sizeid != null && itemid != null && modelid != null) ||
+                    (sizeid != null && weightid != null && modelid != null) ||
+                    (sizeid != null && quantityid != null && modelid != null) ||
+                    (sizeid != null && capacityid != null && modelid != null) ||
+                    (colorId != null && itemid != null && modelid != null) ||
+                    (colorId != null && weightid != null && modelid != null) ||
+                    (colorId != null &&
+                        quantityid != null &&
+                        modelid != null) ||
+                    (colorId != null &&
+                        capacityid != null &&
+                        modelid != null) ||
+                    (itemid != null && weightid != null && modelid != null) ||
+                    (itemid != null && quantityid != null && modelid != null) ||
+                    (itemid != null && capacityid != null && modelid != null) ||
+                    (weightid != null &&
+                        quantityid != null &&
+                        modelid != null) ||
+                    (weightid != null &&
+                        capacityid != null &&
+                        modelid != null) ||
+                    (quantityid != null &&
+                        capacityid != null &&
+                        modelid != null)) {
                   if (_productpricechangebyattributecontroller
                           .Productincart.value ==
                       0) {
@@ -3286,12 +3418,10 @@ class _SingleProductViewState extends State<SingleProductView> {
                     weightid = null;
                     quantityid = null;
                     capacityid = null;
-                  } 
-                  else {
+                  } else {
                     Utils.snackBar(context, 'Failed', 'Already in cart');
                   }
-                } 
-                else {
+                } else {
                   Utils.snackBar(context, 'Failed',
                       'Please select the desired detail before adding to cart');
                 }

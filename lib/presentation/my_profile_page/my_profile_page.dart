@@ -7,7 +7,6 @@ import 'package:mohally/presentation/LanguageSwitchEnglishScreen/switchLanguageS
 import 'package:mohally/presentation/coupans_offeres/coupan_screen.dart';
 import 'package:mohally/presentation/my_account/my_account_screen.dart';
 import 'package:mohally/presentation/my_orders_tab_container_screen/my_orders_tab_container_screen.dart';
-import 'package:mohally/presentation/reviews_screen/reviews_screen.dart';
 import 'package:mohally/presentation/shipping_addresses_screen/shipping_addresses_screen.dart';
 import 'package:mohally/presentation/splash_screen/splash_screen.dart';
 import 'package:mohally/presentation/tab_screen/tab_bar.dart';
@@ -198,17 +197,17 @@ class _MyProfilePageState extends State<MyProfilePage> {
                               userMessage: "My Orders",
                             ),
                           ),
-                          SizedBox(height: 26.v),
-                          InkWell(
-                            onTap: () {
-                              Get.to(() => ReviewsScreen());
-                            },
-                            child: _buildMessageOne(
-                              context,
-                              userImage: ImageConstant.imgRateReview1,
-                              userMessage: "MyReviews",
-                            ),
-                          ),
+                          // SizedBox(height: 26.v),
+                          // InkWell(
+                          //   onTap: () {
+                          //     Get.to(() => ReviewsScreen());
+                          //   },
+                          //   child: _buildMessageOne(
+                          //     context,
+                          //     userImage: ImageConstant.imgRateReview1,
+                          //     userMessage: "MyReviews",
+                          //   ),
+                          // ),
                           SizedBox(height: 26.v),
                           InkWell(
                             onTap: () {
