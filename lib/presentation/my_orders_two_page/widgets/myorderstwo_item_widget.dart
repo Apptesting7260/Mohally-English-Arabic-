@@ -1,0 +1,130 @@
+import 'package:flutter/material.dart';
+
+import 'package:mohally/core/app_export.dart';
+import 'package:mohally/widgets/custom_elevated_button.dart';
+import 'package:mohally/widgets/custom_outlined_button.dart';
+
+// ignore: must_be_immutable
+class MyorderstwoItemWidget extends StatelessWidget {
+  const MyorderstwoItemWidget({Key? key})
+      : super(
+          key: key,
+        );
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 16.h,
+        vertical: 18.v,
+      ),
+      decoration: AppDecoration.fillGray.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder15,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Order No: 1947034",
+                style: CustomTextStyles.titleMediumMedium16,
+              ),
+              Text(
+                "05-12-2019",
+                style: theme.textTheme.bodyMedium,
+              ),
+            ],
+          ),
+          SizedBox(height: 15.v),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(top: 1.v),
+                  child: Text(
+                    "Tracking number",
+                    style: theme.textTheme.bodyMedium,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 5.h),
+                  child: Text(
+                    "IW3475453455",
+                    style: CustomTextStyles.bodyMediumGray90001_1,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 9.v),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 2.v),
+                child: Text(
+                 "Quantity",
+                  style: theme.textTheme.bodyMedium,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 4.h),
+                child: Text(
+                  "3",
+                  style: theme.textTheme.bodyLarge,
+                ),
+              ),
+              Spacer(),
+              Text(
+                "Total Amount",
+                style: CustomTextStyles.bodyMediumGray90001_1,
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 4.h),
+                child: Text(
+                  "199",
+                  style: CustomTextStyles.titleMediumPrimary16,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 17.v),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 10.v,
+                  bottom: 6.v,
+                ),
+                child: Text(
+                  " Processing",
+                  style: CustomTextStyles.bodyMediumPrimary,
+                ),
+              ),
+              Spacer(),
+              CustomOutlinedButton(
+                height: 30.v,
+                width: 80.h,
+                text: " Cancel",
+                buttonTextStyle: CustomTextStyles.labelLargePrimary,
+              ),
+              CustomElevatedButton(
+                height: 30.v,
+                width: 80.h,
+                text: " Details",
+                margin: EdgeInsets.only(left: 8.h),
+                buttonStyle: CustomButtonStyles.fillPrimaryTL15,
+                buttonTextStyle: CustomTextStyles.labelLargeWhiteA70002_1,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
